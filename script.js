@@ -3,7 +3,7 @@ let answers = document.querySelectorAll('.answer');
 
 btns.forEach((btn, index) => {
   btn.addEventListener('click', function () {
-    //let answer = answers[index];
+    let answer = answers[index];
 
     //to close answers
     answers.forEach((answer, i) => {
