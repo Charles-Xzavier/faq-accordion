@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+body {
+  /* background-color: hsl(275, 100%, 97%); */
+  /* background: hsl(275, 100%, 97%) url(./assets/images/background-pattern-desktop.svg) no-repeat;
+  background-size: cover; */
+  height: 100vh;
+  width: 100vw;
+  /* display: grid; */
+}
+
+:is(.main-question) > p {
+  color: hsl(292, 42%, 14%);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+:is(.question) > p {
+  color: hsl(292, 16%, 49%);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.top {
+  height: 40vh;
+  background: url(./assets/images/background-pattern-desktop.svg) no-repeat;
+  background-size: cover;
+  display: grid;
+  position: relative;
+}
+
+.bottom {
+  height: 60vh;
+  background: hsl(275, 100%, 97%);
+}
+
+.container {
+  position: absolute;
+  top: 25vh;
+  background: hsl(0, 0%, 100%);
+  max-width: 650px;
+  z-index: 1;
+  border-radius: 15px;
+  place-self: center;
+}
+
+:is(.main-question) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  padding: 1.7rem 1.5rem;
+  width: 100%;
+}
+
+.heading {
+  display: flex;
+  gap: 10%;
+  width: 170px;
+  margin-bottom: 1rem;
+
+  & img {
+    align-self: center;
+  }
+
+  & h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(223, 222, 222);
+
+  & .main-question {
+    padding-block: 1rem;
+
+    :hover {
+      cursor: pointer;
+      color: #ad28eb;
+    }
+
+    & p {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.answer {
+  display: none;
+  padding-bottom: 1rem;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+  :is(.main-question) > p {
+    font-size: 1rem;
+  }
+
+  :is(.question) > p {
+    font-size: 0.9rem;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .heading img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    width: 90%;
+  }
+}
