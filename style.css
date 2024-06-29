@@ -10,12 +10,8 @@ html {
 }
 
 body {
-  /* background-color: hsl(275, 100%, 97%); */
-  /* background: hsl(275, 100%, 97%) url(./assets/images/background-pattern-desktop.svg) no-repeat;
-  background-size: cover; */
   height: 100vh;
   width: 100vw;
-  /* display: grid; */
 }
 
 :is(.main-question) > p {
